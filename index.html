@@ -9,6 +9,28 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Fade effect for profile image
+            $(".profile-img img").hide().fadeIn(2000);
+            
+            // Slide toggle for About Me section
+            $(".about h2").click(function () {
+                $(".about p").slideToggle();
+            });
+            
+            // Show/Hide Projects on button click
+            $(".projects h2").after('<button class="toggle-projects">Toggle Projects</button>');
+            $(".toggle-projects").click(function () {
+                $(".project").fadeToggle();
+            });
+            
+            // Animate Skills Bar
+            $(".skill").each(function () {
+                $(this).animate({ width: "80%" }, 1500);
+            });
+        });
+    </script>
     
 </head>
 
